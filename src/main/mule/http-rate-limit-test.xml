@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="8b622891-74f1-4783-9156-cd2d1983d26b" basePath="/api" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<api-gateway:autodiscovery apiId="18247150" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="40c8fcfe-0108-4372-9c64-e4b6abb73b93" flowRef="http-rate-limit-testFlow" />
+	<!--<api-gateway:autodiscovery apiId="18247150" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="40c8fcfe-0108-4372-9c64-e4b6abb73b93" flowRef="http-rate-limit-testFlow" />-->
 	<flow name="http-rate-limit-testFlow" doc:id="1c30b838-fea6-4d6d-8334-6c5134b407f0" >
 		<http:listener doc:name="Listener" doc:id="7270179c-42e3-4ac9-96dd-8062140d5eed" config-ref="HTTP_Listener_config" path="/helloworld"/>
 		<logger level="INFO" doc:name="Logger" doc:id="29ae71f0-f366-4f9f-956d-acbf7486d345" message="Received the helloworl GET request"/>
